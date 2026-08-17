@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1>NUMBER GUESSING GAME</h1>
+            <p>Can you guess the secret number?</p>
+        </header>
+
+        <main class="game-layout">
+            <section class="panel control-panel">
+                <h2>DIFFICULTY</h2>
+
+                <select id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                    <option value="Impossible">Impossible</option>
+                </select>
+
+                <button id="startButton" class="primary-button">START NEW GAME</button>
+
+                <div id="status" class="status">
+                    Choose a difficulty<br>
+                    and start the game!
+                </div>
+
+                <div id="attempts" class="attempts">Attempts left: 0</div>
+                <div id="bestScore" class="best-score">Best Score: No score yet</div>
+
+                <input
+                    id="guessInput"
+                    type="number"
+                    min="1"
+                    max="1000"
+                    placeholder="Enter your guess"
+                    disabled
+                    autocomplete="off"
+                >
+
+                <button id="guessButton" class="primary-button" disabled>CHECK GUESS</button>
+
+                <button id="newGameButton" class="secondary-button">NEW GAME</button>
+                <button id="resetScoresButton" class="secondary-button">RESET BEST SCORES</button>
+            </section>
+
+            <section class="panel history-panel">
+                <h2>GUESS HISTORY</h2>
+                <div id="history" class="history">
+                    <div class="empty-history">Your guesses will appear here.</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Guess a number from 1 to 1000. Fewer attempts = better score.</p>
+        </footer>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
