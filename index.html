@@ -6,45 +6,31 @@
     <title>Number Guessing Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="app">
         <header>
             <h1>NUMBER GUESSING GAME</h1>
             <p>Can you guess the secret number?</p>
         </header>
-
         <main class="game-area">
             <section class="left-panel">
                 <h2>DIFFICULTY</h2>
-
                 <select id="difficulty">
                     <option value="Easy">Easy</option>
                     <option value="Medium">Medium</option>
                     <option value="Hard">Hard</option>
                     <option value="Impossible">Impossible</option>
                 </select>
-
                 <button id="startButton" class="game-button">START NEW GAME</button>
-
-                <div id="status" class="status">Choose a difficulty and start the game!</div>
-
+                <div id="status" class="status">
+                    Guess a number between 1 and 1000!<br>
+                    Choose a difficulty and start the game!
+                </div>
                 <div id="attempts" class="attempts">Attempts left: 0</div>
-
                 <div id="bestScore" class="best-score">Best Score: No score yet</div>
-
-                <input
-                    id="guessInput"
-                    type="number"
-                    min="1"
-                    max="1000"
-                    autocomplete="off"
-                    disabled
-                >
-
+                <input id="guessInput" type="number" min="1" max="1000" autocomplete="off" disabled>
                 <button id="guessButton" class="game-button" disabled>CHECK GUESS</button>
             </section>
-
             <section class="right-panel">
                 <h2>GUESS HISTORY</h2>
                 <div id="history" class="history">
@@ -52,13 +38,11 @@
                 </div>
             </section>
         </main>
-
         <div class="bottom-buttons">
             <button id="newGameButton" class="game-button bottom-button">NEW GAME</button>
             <button id="quitButton" class="game-button bottom-button">QUIT</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
