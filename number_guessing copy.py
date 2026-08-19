@@ -19,8 +19,8 @@ class BestScore:
             with open(self.filename, "r") as f:
                 content = f.read().strip()
 
-            if content:
-                return int(content)
+                if content:
+                    return int(content)
 
         except (FileNotFoundError, ValueError):
             pass
@@ -600,8 +600,8 @@ start_button.grid(
 status_label = tk.Label(
     left_frame,
     text=(
-        "Choose a difficulty\n"
-        "and start the game!"
+        "Guess a number between 1 and 1000!\n"
+        "Choose a difficulty and start the game!"
     ),
     font=("Helvetica", 15),
     bg="#28283d",
